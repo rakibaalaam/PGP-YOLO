@@ -2,7 +2,9 @@
 
 This repository accompanies the manuscript **"When Priors Meet Budgets: A Controlled Study of Perspective Geometry for Real-Time Vehicle and Pedestrian Detection"** by Rakibul Alam, Md. Shohel Sayeed, and Siti Fatimah Binti Abdul Razak (Multimedia University), under review at the *Journal of Computational and Cognitive Engineering* (manuscript JCCE-11617).
 
-It contains everything needed to check or reproduce the paper's numbers: the experiment notebook, the module code, the exact data splits, the full training configuration, the per-run results for all 47 runs, and scripts that rebuild the replication tables from those results without a GPU.
+Archived on Zenodo: [https://doi.org/10.5281/zenodo.23098724](https://doi.org/10.5281/zenodo.23098724) (this DOI always resolves to the latest version).
+
+It contains everything needed to check or reproduce the paper's numbers: the experiment notebook, the module code, the exact data splits, the full training configuration, the per-run results for every run reported in the paper, and scripts that rebuild the replication tables from those results without a GPU.
 
 ## Contents
 
@@ -11,14 +13,15 @@ It contains everything needed to check or reproduce the paper's numbers: the exp
 | `notebook/PGP_YOLO_KITTI_Q1_Experiment.ipynb` | The complete experiment, executed, with outputs. Runs top to bottom on free Google Colab and resumes across session limits. |
 | `code/pgp_modules.py` | PGSA and PGCSF modules and the YOLO11 graph surgery (extracted from the notebook). |
 | `code/regenerate_tables.py` | Rebuilds Tables 7, 8, and 9 (seed robustness, paired tests with Holm correction, BDD100K) from `results/`. CPU only, seconds. |
-| `code/export_bdd100k_subset_lists.py` | Lists the exact BDD100K subset from the Drive cache (see below). |
+| `code/export_bdd100k_subset_lists.py` | The script that exported the BDD100K subset lists from the Drive cache (see below). |
 | `configs/TRAINING_CONFIGURATION.md` | Every training and evaluation setting, including resolved framework defaults. |
 | `configs/experiment_config.json` | The experiment configuration as run. |
 | `configs/pgp_a1_yolo11s.yaml`, `pgp_a2_yolo11s.yaml` | Model definitions for the PGSA and PGSA+PGCSF variants. |
 | `configs/logged_train_args.json` | Complete argument lists as logged by Ultralytics for five stage-2 runs. |
 | `checkpoints/pgp_a1_init.pt`, `pgp_a2_init.pt` | Initial weights for the PGP variants (YOLO11s COCO weights transferred into the modified graph; new layers at identity). |
 | `splits/kitti_train.txt`, `splits/kitti_val.txt` | The exact KITTI split (5,984 / 1,497 image IDs). |
-| `results/*.json` | Per-run metrics for all 47 runs (precision, recall, mAP@0.5, mAP@0.5:0.95, per-class AP, latency, parameters, GFLOPs), plus cached predictions and stratified analyses. |
+| `splits/bdd100k_train.txt`, `splits/bdd100k_val.txt` | The exact BDD100K subset (6,000 / 1,500 image IDs). |
+| `results/*.json` | Per-run metrics (precision, recall, mAP@0.5, mAP@0.5:0.95, per-class AP, latency, parameters, GFLOPs) for all 55 runs: the 47 runs of the final experiment plus the 8 runs of the superseded shared-checkpoint replication. Also cached predictions and stratified analyses. |
 | `tables/`, `figures/`, `prior/` | Tables and figures as produced by the notebook, and the fitted perspective prior. |
 | `env/requirements_frozen.txt`, `env/nvidia_smi.txt` | Frozen software environment and GPU. |
 
@@ -43,11 +46,11 @@ Software: Ultralytics 8.3.107, PyTorch 2.11.0+cu128, Python 3.12.13. The noteboo
 
 **KITTI.** The notebook sorts the 7,481 labelled training image IDs, shuffles them with `random.Random(0)`, and takes the first 80% for training. `splits/kitti_*.txt` list the result. We confirmed that this procedure reproduces exactly the 1,497 validation images recorded in the cached predictions (`results/preds_val_*.json`).
 
-**BDD100K.** The paper uses a fixed random subset of 6,000 training and 1,500 validation images drawn once from the Kaggle mirror and cached on Google Drive. The sampler shuffled files in filesystem order, so re-running it on another machine is not guaranteed to draw the same subset. The cached archive is therefore the authoritative record, and `code/export_bdd100k_subset_lists.py` lists it as `splits/bdd100k_train.txt` and `splits/bdd100k_val.txt`.
+**BDD100K.** The paper uses a fixed random subset of 6,000 training and 1,500 validation images drawn once from the Kaggle mirror and cached on Google Drive. The sampler shuffled files in filesystem order, so re-running it on another machine is not guaranteed to draw the same subset. The cached archive is therefore the authoritative record. `splits/bdd100k_train.txt` (6,000 IDs) and `splits/bdd100k_val.txt` (1,500 IDs) were exported from it with `code/export_bdd100k_subset_lists.py`; the two lists are disjoint.
 
 ## Data licences
 
-The KITTI and BDD100K images are not redistributed here; obtain them from their providers under their own licences. This repository contains only image IDs, derived metrics, and code.
+The code in this repository is released under the MIT licence (`LICENSE`). The KITTI and BDD100K images are not redistributed here; obtain them from their providers under their own licences. This repository contains only image IDs, derived metrics, and code. Ultralytics YOLO, on which the code builds, is distributed under AGPL-3.0.
 
 ## Run naming
 
@@ -72,4 +75,4 @@ The KITTI and BDD100K images are not redistributed here; obtain them from their 
 
 ## Citation
 
-See `CITATION.cff`. Please cite the article once it is published.
+See `CITATION.cff`. Please cite the article once it is published; to cite this archive, use [https://doi.org/10.5281/zenodo.23098724](https://doi.org/10.5281/zenodo.23098724).

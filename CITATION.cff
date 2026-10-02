@@ -13,7 +13,9 @@ authors:
     family-names: "Binti Abdul Razak"
     affiliation: "Faculty of Information Science and Technology, Multimedia University, Melaka, Malaysia"
 license: MIT
-repository-code: "<<GITHUB URL>>"
+repository-code: "https://github.com/rakibaalaam/PGP-YOLO"
+url: "https://github.com/rakibaalaam/PGP-YOLO"
+doi: 10.5281/zenodo.23098724
 keywords:
   - object detection
   - autonomous driving
