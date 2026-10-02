@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Geometry-consistent fine-tuning (Geo-FT) vs the equal-budget standard-augmentation control (Std-FT), mAP@0.5:0.95 on KITTI.}
+\label{tab:recipe}
+\begin{tabular}{lrrrrr}
+\toprule
+Architecture & Base (80 ep) & Std-FT (+25 ep) & Geo-FT (+25 ep) & Geo - Base & Geo - Std \\
+\midrule
+YOLOv5s-u & 0.731300 & 0.737600 & 0.739400 & 0.008100 & 0.001800 \\
+YOLOv8s & 0.740200 & 0.745700 & 0.745400 & 0.005200 & -0.000400 \\
+YOLOv10s & 0.725800 & 0.731200 & 0.735000 & 0.009200 & 0.003800 \\
+YOLO11s & 0.734100 & 0.742500 & 0.746300 & 0.012200 & 0.003700 \\
+\bottomrule
+\end{tabular}
+\end{table}

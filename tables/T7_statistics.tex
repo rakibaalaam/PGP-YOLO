@@ -1,0 +1,15 @@
+\begin{table}
+\caption{Paired statistical analysis across seeds: mean difference, 95% confidence interval, paired t-test and Wilcoxon signed-rank p-values, and paired effect size (Cohen's d_z).}
+\label{tab:stats}
+\begin{tabular}{lrrrlrrrrl}
+\toprule
+Comparison & n & Mean diff & SD & 95% CI & t & p (t-test) & p (Wilcoxon) & Cohen d_z & Significant \\
+\midrule
+[KITTI] YOLO11s: Geo-FT vs Std-FT & 3 & 0.002600 & 0.002300 & [-0.0031, +0.0084] & 1.982000 & 0.185900 & 0.500000 & 1.145000 & no \\
+[KITTI] YOLOv8s: Geo-FT vs Std-FT & 3 & 0.000300 & 0.001100 & [-0.0023, +0.0030] & 0.549000 & 0.638200 & 1.000000 & 0.317000 & no \\
+[KITTI] YOLO11s: Geo-FT vs 80-ep base & 3 & 0.011200 & 0.000900 & [+0.0089, +0.0134] & 21.507000 & 0.002200 & 0.250000 & 12.417000 & yes \\
+[BDD100K] YOLO11s: Geo-FT vs Std-FT & 3 & -0.006200 & 0.001300 & [-0.0094, -0.0030] & -8.387000 & 0.013900 & 0.250000 & -4.842000 & yes \\
+[BDD100K] YOLOv8s: Geo-FT vs Std-FT & 3 & -0.002600 & 0.001800 & [-0.0071, +0.0020] & -2.449000 & 0.134000 & 0.250000 & -1.414000 & no \\
+\bottomrule
+\end{tabular}
+\end{table}

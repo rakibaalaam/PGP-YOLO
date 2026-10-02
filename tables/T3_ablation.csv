@@ -1,0 +1,9 @@
+Configuration,PGSA,PGCSF,PA-CP,Std-FT,Geo-FT,mAP@0.5,mAP@0.5:0.95,Params (M),Latency (ms)
+A0: YOLO11 (baseline),,,,,,0.9328,0.7341,9.42,11.6
+A1: +PGSA,x,,,,,0.9366,0.7375,9.42,9.3
+A2: +PGSA +PGCSF,x,x,,,,0.9368,0.7337,9.42,10.2
+v1: +PGSA +PGCSF +PA-CP,x,x,x,,,0.9369,0.7387,9.42,9.7
+A0 + std fine-tune (ctrl),,,,x,,0.9385,0.7425,9.42,12.1
+A0 + geo fine-tune,,,,,x,0.9375,0.7463,9.42,9.3
+A1 + geo fine-tune,x,,,,x,0.9377,0.7459,9.42,10.4
+v2: full + geo fine-tune,x,x,x,,x,0.9376,0.7475,9.42,9.7

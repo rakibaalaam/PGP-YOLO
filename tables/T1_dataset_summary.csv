@@ -1,0 +1,8 @@
+Class,Train instances,Val instances,Median rel. height
+Car,22821,5919,0.1254
+Van,2368,546,0.1386
+Truck,859,234,0.156
+Pedestrian,3840,868,0.2366
+Cyclist,1304,323,0.1663
+Tram,384,127,0.1755
+TOTAL,31576,8017,

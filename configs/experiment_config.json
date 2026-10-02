@@ -1,0 +1,104 @@
+{
+  "SCALE": "s",
+  "EPOCHS": 80,
+  "IMGSZ": 640,
+  "BATCH": 16,
+  "PATIENCE": 25,
+  "WORKERS": 2,
+  "SEED": 0,
+  "FAST_MODE": false,
+  "RUN_RTDETR": false,
+  "RUN_BDD": true,
+  "SKIP": [],
+  "FORCE_REEVAL": false,
+  "KAGGLE_DATASET": "klemenko/kitti-dataset",
+  "BDD_KAGGLE": "a7madmostafa/bdd100k-yolo",
+  "BDD_KAGGLE_ALT": [
+    "marquis03/bdd100k",
+    "alkanet88/bdd100k-yol-format"
+  ],
+  "EXTVAL_MAX_TRAIN": 6000,
+  "EXTVAL_MAX_VAL": 1500,
+  "EXTVAL_SEEDS": [
+    1,
+    2
+  ],
+  "TRAIN_FRACTION": 0.8,
+  "CLASSES": [
+    "Car",
+    "Van",
+    "Truck",
+    "Pedestrian",
+    "Cyclist",
+    "Tram"
+  ],
+  "KITTI_MAP": {
+    "Car": 0,
+    "Van": 1,
+    "Truck": 2,
+    "Pedestrian": 3,
+    "Person_sitting": 3,
+    "Cyclist": 4,
+    "Tram": 5
+  },
+  "JPEG_QUALITY": 92,
+  "PGSA_GROUPS": 8,
+  "PGSA_HIDDEN": 32,
+  "PGCSF_HIDDEN": 16,
+  "PACP_FRACTION": 0.3,
+  "PACP_MAX_PASTE": 3,
+  "PACP_CLASSES": [
+    3,
+    4
+  ],
+  "PACP_MIN_SRC_H": 0.07,
+  "PRIOR_BINS": 24,
+  "GEO_EPOCHS": 25,
+  "GEO_OVERRIDES": {
+    "mosaic": 0.0,
+    "scale": 0.2,
+    "translate": 0.05,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "optimizer": "SGD",
+    "lr0": 0.002,
+    "lrf": 0.05,
+    "warmup_epochs": 1.0,
+    "patience": 15
+  },
+  "STD_OVERRIDES": {
+    "mosaic": 1.0,
+    "scale": 0.5,
+    "translate": 0.1,
+    "close_mosaic": 0,
+    "mixup": 0.0,
+    "copy_paste": 0.0,
+    "optimizer": "SGD",
+    "lr0": 0.002,
+    "lrf": 0.05,
+    "warmup_epochs": 1.0,
+    "patience": 15
+  },
+  "EXTRA_SEEDS": [
+    1,
+    2
+  ],
+  "SCRATCH_SEEDS": [
+    1,
+    2
+  ],
+  "SCRATCH_ARCHS": [
+    "yolo11",
+    "yolov8"
+  ],
+  "ultralytics": "8.3.107",
+  "torch": "2.11.0+cu128",
+  "python": "3.12.13",
+  "numpy": "2.0.2",
+  "gpu": "Tesla T4",
+  "dataset": "klemenko/kitti-dataset",
+  "n_train_images": 5984,
+  "n_val_images": 1497,
+  "n_pacp_images": 1735,
+  "date": "2026-07-27"
+}

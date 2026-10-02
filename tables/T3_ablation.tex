@@ -1,0 +1,18 @@
+\begin{table}
+\caption{Ablation study of PGP-YOLO components.}
+\label{tab:ablation}
+\begin{tabular}{llllllrrrr}
+\toprule
+Configuration & PGSA & PGCSF & PA-CP & Std-FT & Geo-FT & mAP@0.5 & mAP@0.5:0.95 & Params (M) & Latency (ms) \\
+\midrule
+A0: YOLO11 (baseline) &  &  &  &  &  & 0.932800 & 0.734100 & 9.420000 & 11.600000 \\
+A1: +PGSA & x &  &  &  &  & 0.936600 & 0.737500 & 9.420000 & 9.300000 \\
+A2: +PGSA +PGCSF & x & x &  &  &  & 0.936800 & 0.733700 & 9.420000 & 10.200000 \\
+v1: +PGSA +PGCSF +PA-CP & x & x & x &  &  & 0.936900 & 0.738700 & 9.420000 & 9.700000 \\
+A0 + std fine-tune (ctrl) &  &  &  & x &  & 0.938500 & 0.742500 & 9.420000 & 12.100000 \\
+A0 + geo fine-tune &  &  &  &  & x & 0.937500 & 0.746300 & 9.420000 & 9.300000 \\
+A1 + geo fine-tune & x &  &  &  & x & 0.937700 & 0.745900 & 9.420000 & 10.400000 \\
+v2: full + geo fine-tune & x & x & x &  & x & 0.937600 & 0.747500 & 9.420000 & 9.700000 \\
+\bottomrule
+\end{tabular}
+\end{table}

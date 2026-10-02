@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the article."
+title: "When Priors Meet Budgets: code, results, and data splits"
+type: software
+authors:
+  - given-names: Rakibul
+    family-names: Alam
+    affiliation: "Faculty of Information Science and Technology, Multimedia University, Melaka, Malaysia"
+  - given-names: "Md. Shohel"
+    family-names: Sayeed
+    affiliation: "Faculty of Information Science and Technology, Multimedia University, Melaka, Malaysia"
+  - given-names: "Siti Fatimah"
+    family-names: "Binti Abdul Razak"
+    affiliation: "Faculty of Information Science and Technology, Multimedia University, Melaka, Malaysia"
+license: MIT
+repository-code: "<<GITHUB URL>>"
+keywords:
+  - object detection
+  - autonomous driving
+  - controlled evaluation
+  - reproducibility
+  - YOLO

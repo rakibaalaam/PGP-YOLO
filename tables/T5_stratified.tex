@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Height-stratified mAP@0.5 and the effect of prior-based plausibility filtering.}
+\label{tab:stratified}
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & Small (<25px) & Medium (25-40px) & Large (>=40px) & All & PG-Filter tau & All +PG-Filter \\
+\midrule
+YOLO11s & 0.689800 & 0.858100 & 0.948700 & 0.931000 & 1.200000 & 0.931000 \\
+YOLOv8s & 0.683300 & 0.861900 & 0.947800 & 0.930600 & 1.200000 & 0.930600 \\
+PGP-YOLO v1 & 0.665400 & 0.853700 & 0.949600 & 0.930500 & 1.200000 & 0.930500 \\
+YOLO11s (geo-ft) & 0.712100 & 0.863000 & 0.947500 & 0.931200 & 1.000000 & 0.930600 \\
+YOLO11s (std-ft ctrl) & 0.736300 & 0.868100 & 0.951600 & 0.934100 & 1.000000 & 0.934100 \\
+YOLOv8s (geo-ft) & 0.730000 & 0.870000 & 0.946600 & 0.932500 & 1.500000 & 0.932500 \\
+YOLOv8s (std-ft ctrl) & 0.696100 & 0.861500 & 0.946400 & 0.930300 & 1.000000 & 0.930200 \\
+PGP-YOLO-A1geo (ours) & 0.684300 & 0.856800 & 0.949800 & 0.931800 & 1.200000 & 0.931800 \\
+PGP-YOLO v2 (ours) & 0.694900 & 0.863600 & 0.950700 & 0.934400 & 1.200000 & 0.934400 \\
+\bottomrule
+\end{tabular}
+\end{table}

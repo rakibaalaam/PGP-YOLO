@@ -1,0 +1,8 @@
+Comparison,Mean diff,95% CI,p (paired t),Holm p,d_z,Wilcoxon p,Verdict
+KITTI YOLO11s: Geo-FT vs Std-FT,+0.0026,"[-0.0031, +0.0084]",0.186,0.744,1.14,0.50,n.d.
+KITTI YOLOv8s: Geo-FT vs Std-FT,+0.0003,"[-0.0023, +0.0030]",0.638,1.000,0.32,1.00,n.d.
+KITTI YOLO11s: Geo-FT vs base,+0.0112,"[+0.0089, +0.0134]",0.002,0.015,12.42,0.25,est.
+KITTI PGSA vs YOLO11s (80 ep),+0.0012,"[-0.0093, +0.0117]",0.673,1.000,0.28,0.75,n.d.
+KITTI PGSA+Geo-FT vs YOLO11s+Geo-FT,+0.0006,"[-0.0042, +0.0054]",0.650,1.000,0.31,1.00,n.d.
+BDD100K YOLO11s: Geo-FT vs Std-FT,-0.0062,"[-0.0094, -0.0030]",0.014,0.084,-4.84,0.25,nom.
+BDD100K YOLOv8s: Geo-FT vs Std-FT,-0.0026,"[-0.0071, +0.0020]",0.134,0.670,-1.41,0.25,n.d.
